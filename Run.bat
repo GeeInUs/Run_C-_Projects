@@ -1,0 +1,7 @@
+powershell -command "(new-object -com shell.application).minimizeall()
+del /s /q "C:\Users\gboyega\source\repos\task-automation\Dbgis.LabApp.Testing.Automation\Dbgis.LabApp.Testing.Automation.Expose\bin\Debug\netcoreapp3.1\Expose"
+dotnet clean "C:\Users\gboyega\source\repos\task-automation\Dbgis.LabApp.Testing.Automation\Dbgis.LabApp.Testing.Automation.sln" --configuration Debug
+dotnet build "C:\Users\gboyega\source\repos\task-automation\Dbgis.LabApp.Testing.Automation\Dbgis.LabApp.Testing.Automation.sln" --configuration Debug
+dotnet test  "C:\Users\gboyega\source\repos\task-automation\Dbgis.LabApp.Testing.Automation\Dbgis.LabApp.Testing.Automation.Expose\Dbgis.LabApp.Testing.Automation.Tasks.Expose.sln"  --filter "TestCategory=DEMO" --settings "C:\Users\gboyega\source\repos\task-automation\Dbgis.LabApp.Testing.Automation\Dbgis.LabApp.Testing.Automation.Expose\Expose.runsettings"
+livingdoc "C:\Users\gboyega\source\repos\task-automation\Dbgis.LabApp.Testing.Automation\Dbgis.LabApp.Testing.Automation.Expose\bin\Debug\netcoreapp3.1\FeatureData.json" --output "C:\Users\gboyega\source\repos\task-automation\Dbgis.LabApp.Testing.Automation\Dbgis.LabApp.Testing.Automation.Expose\bin\Debug\netcoreapp3.1\Expose\Reports\Expose_Living_documentation.html"
+explorer  "C:\Users\gboyega\source\repos\task-automation\Dbgis.LabApp.Testing.Automation\Dbgis.LabApp.Testing.Automation.Expose\bin\Debug\netcoreapp3.1\Expose\Reports"
